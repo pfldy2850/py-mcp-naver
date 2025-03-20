@@ -4,6 +4,8 @@ A server implementation for Naver OpenAPI using the Model Context Protocol (MCP)
 
 ## Quick Overview
 
+### Installation
+
 ```sh
 # Clone the repository
 git clone https://github.com/pfldy2850/py-mcp-naver.git
@@ -15,14 +17,18 @@ cd py-mcp-naver
 uv sync --dev --all-extras
 ```
 
+### Pre-requisite
+To use the Naver MCP server, you need to apply for access to the Naver Open API. 
+You can apply for Open API access at the link below:
+
+https://developers.naver.com/apps/#/register=datalab
+
+
+### Run
 Run it with:
 ```sh
 # Start the server (Using FastMCP CLI)
-fastmcp install src/server.py
-
-# Start
-python src/server.py
-uv run python src/server.py
+fastmcp install src/server.py -e NAVER_CLIENT_ID=<YOUR NAVER CLIENT ID> -e NAVER_CLIENT_SECRET=<YOUR NAVER CLIENT SECRET>
 ```
 
 The tool sets up everything you need to create an MCP server integrated with Naver OpenAPI.
@@ -44,6 +50,7 @@ This server provides the following tools for interacting with Naver OpenAPI:
 - **Image Search**: Search images with filters.
 - **Shopping Search**: Search shopping items with filters.
 - **Document Search**: Search documents.
+
 
 
 ## Naver MCP Tools
