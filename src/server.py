@@ -7,7 +7,7 @@ import os
 import httpx
 
 
-mcp = FastMCP("Naver OpenAPI")
+mcp = FastMCP("Naver OpenAPI", dependencies=["httpx", "xmltodict"])
 
 
 NAVER_CLIENT_ID = os.environ.get("NAVER_CLIENT_ID")
@@ -526,3 +526,7 @@ def search_doc(
         response.raise_for_status()  # Raise an error for bad responses
 
         return response.text
+
+
+if __name__ == "__main__":
+    mcp.run()
