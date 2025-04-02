@@ -23,7 +23,7 @@ uv run python -m mcp-naver.hosts.claude_desktop \
   -e NAVER_CLIENT_SECRET=<YOUR NAVER CLIENT SECRET>
 ```
 
-Install it to Claude Desktop with (uv):
+Install it to Claude Desktop with:
 ```sh
 pip install mcp-naver
 
