@@ -18,8 +18,8 @@ authors = [{ name = "Dongyong Lee", email = "pfldy2850@gmail.com" }]
 
 [project.urls]
 Repository = "https://github.com/pfldy2850/py-mcp-naver.git"
-Issues = "https://github.com/pfldy2850/mcp-mcp-naver/issues"
-Github = "https://github.com/pfldy2850/mcp-mcp-naver"
+Issues = "https://github.com/pfldy2850/py-mcp-naver/issues"
+Github = "https://github.com/pfldy2850/py-mcp-naver"
 
 [project.scripts]
 mcp-naver = "mcp_naver:server"
