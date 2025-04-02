@@ -1,11 +1,10 @@
 # demo.py
-import xmltodict
 import json
-from fastmcp import FastMCP
-
 import os
-import httpx
 
+import httpx
+import xmltodict
+from fastmcp import FastMCP
 
 mcp = FastMCP("Naver OpenAPI", dependencies=["httpx", "xmltodict"])
 

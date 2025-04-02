@@ -12,9 +12,9 @@ https://developers.naver.com/apps/#/register=datalab
 
 ## Installation
 
-### from Pypi (recommended)
+### from Pypi (Claude Desktop)
 
-Run it with (uv):
+Install it to Claude Desktop with (uv):
 ```sh
 uv pip install mcp-naver
 
@@ -23,11 +23,23 @@ uv run python -m mcp-naver.hosts.claude_desktop \
   -e NAVER_CLIENT_SECRET=<YOUR NAVER CLIENT SECRET>
 ```
 
-Run it with:
+Install it to Claude Desktop with (uv):
 ```sh
 pip install mcp-naver
 
 python -m mcp-naver.hosts.claude_desktop \
+  -e NAVER_CLIENT_ID=<YOUR NAVER CLIENT ID> \
+  -e NAVER_CLIENT_SECRET=<YOUR NAVER CLIENT SECRET>
+```
+
+
+### from Pypi (Cursor)
+
+Install it to Cursor with (uv):
+```sh
+uv pip install mcp-naver
+
+uv run python -m mcp-naver.hosts.claude_desktop \
   -e NAVER_CLIENT_ID=<YOUR NAVER CLIENT ID> \
   -e NAVER_CLIENT_SECRET=<YOUR NAVER CLIENT SECRET>
 ```

@@ -3,38 +3,34 @@ import sys
 from pathlib import Path
 from typing import Dict, Optional
 
-from fastmcp.cli import claude
+
+def get_cursor_mcp_config_path() -> Path | None:
+    """Get the Cursor MCP config directory based on platform."""
+    path = Path(Path.home(), ".cursor")
+
+    if path.exists():
+        return path
+    return None
 
 
-def update_claude_config(
+def update_cursor_config(
     server_name: str,
     *,
     with_editable: Optional[Path] = None,
     with_packages: Optional[list[str]] = None,
     env_vars: Optional[Dict[str, str]] = None,
 ) -> bool:
-    """Add or update a FastMCP server in Claude's configuration.
-
-    Args:
-        file_spec: Path to the server file, optionally with :object suffix
-        server_name: Name for the server in Claude's config
-        with_editable: Optional directory to install in editable mode
-        with_packages: Optional list of additional packages to install
-        env_vars: Optional dictionary of environment variables. These are merged with
-            any existing variables, with new values taking precedence.
-
-    Raises:
-        RuntimeError: If Claude Desktop's config directory is not found, indicating
-            Claude Desktop may not be installed or properly set up.
     """
-    config_dir = claude.get_claude_config_path()
+    Add or update a FastMCP server in Cursor's configuration.
+    """
+    config_dir = get_cursor_mcp_config_path()
     if not config_dir:
         raise RuntimeError(
-            "Claude Desktop config directory not found. Please ensure Claude Desktop "
+            "Cursor config directory not found. Please ensure Cursor "
             "is installed and has been run at least once to initialize its configuration."
         )
 
-    config_file = config_dir / "claude_desktop_config.json"
+    config_file = config_dir / "mcp.json"
     if not config_file.exists():
         config_file.write_text("{}")
 
@@ -89,13 +85,13 @@ def update_claude_config(
     config_file.write_text(json.dumps(config, indent=2))
 
 
-def install_to_claude_desktop(
+def install_to_cursor(
     env_vars: list[str] = None,
 ):
     """
-    Install the MCP to Claude Desktop.
+    Install the MCP to Cursor.
     """
-    if not claude.get_claude_config_path():
+    if not get_cursor_mcp_config_path():
         sys.exit(1)
 
     from mcp_naver.server import mcp
@@ -112,7 +108,7 @@ def install_to_claude_desktop(
             key, value = env_var.split("=", 1)
             env_dict[key.strip()] = value.strip()
 
-    if update_claude_config(
+    if update_cursor_config(
         name,
         with_packages=with_packages,
         env_vars=env_dict,
@@ -126,7 +122,7 @@ if __name__ == "__main__":
     from argparse import ArgumentParser
 
     parser = ArgumentParser(
-        description="Install the MCP to Claude Desktop.",
+        description="Install the MCP to Cursor.",
     )
     parser.add_argument(
         "--env",
@@ -137,6 +133,6 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    install_to_claude_desktop(
+    install_to_cursor(
         env_vars=args.env,
     )
