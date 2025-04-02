@@ -12,7 +12,7 @@ https://developers.naver.com/apps/#/register=datalab
 
 ## Installation
 
-### from Pypi (Claude Desktop)
+### from PyPi (Claude Desktop)
 
 Install it to Claude Desktop with (uv):
 ```sh
@@ -33,7 +33,7 @@ python -m mcp-naver.hosts.claude_desktop \
 ```
 
 
-### from Pypi (Cursor)
+### from PyPi (Cursor)
 
 Install it to Cursor with (uv):
 ```sh
