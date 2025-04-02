@@ -39,7 +39,7 @@ Install it to Cursor with (uv):
 ```sh
 uv pip install mcp-naver
 
-uv run python -m mcp-naver.hosts.claude_desktop \
+uv run python -m mcp-naver.hosts.cursor \
   -e NAVER_CLIENT_ID=<YOUR NAVER CLIENT ID> \
   -e NAVER_CLIENT_SECRET=<YOUR NAVER CLIENT SECRET>
 ```
