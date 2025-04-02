@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "mcp-naver"
 version = "0.1.5"
-description = "A Python library that provides easy access to Naver Open APIs using FastMCP, including search services for blogs, news, books, encyclopedia, cafes, Q&A, local information, images, shopping, and more"
+description = "MCP server providing Naver Open APIs"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
