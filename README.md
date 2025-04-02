@@ -28,7 +28,7 @@ https://developers.naver.com/apps/#/register=datalab
 Run it with:
 ```sh
 # Start the server (Using FastMCP CLI)
-fastmcp install src/server.py -e NAVER_CLIENT_ID=<YOUR NAVER CLIENT ID> -e NAVER_CLIENT_SECRET=<YOUR NAVER CLIENT SECRET>
+fastmcp install mcp_naver/server.py -e NAVER_CLIENT_ID=<YOUR NAVER CLIENT ID> -e NAVER_CLIENT_SECRET=<YOUR NAVER CLIENT SECRET>
 ```
 
 The tool sets up everything you need to create an MCP server integrated with Naver OpenAPI.

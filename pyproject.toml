@@ -1,3 +1,7 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "py-mcp-naver"
 version = "0.1.0"
@@ -10,3 +14,15 @@ dependencies = [
     "pydantic>=2.10.6",
     "xmltodict>=0.14.2",
 ]
+authors = [{ name = "Dongyong Lee", email = "pfldy2850@gmail.com" }]
+
+[project.urls]
+Repository = "https://github.com/pfldy2850/py-mcp-naver.git"
+Issues = "https://github.com/pfldy2850/mcp-mcp-naver/issues"
+Github = "https://github.com/pfldy2850/mcp-mcp-naver"
+
+[project.scripts]
+mcp-naver = "mcp_naver:server"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mcp_naver"]
