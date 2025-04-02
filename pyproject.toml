@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "py-mcp-naver"
+name = "mcp-naver"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
