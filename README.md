@@ -2,9 +2,38 @@
 
 A server implementation for Naver OpenAPI using the Model Context Protocol (MCP). This project provides tools to interact with various Naver services, such as searching blogs, news, books, and more.
 
-## Quick Overview
 
-### Installation
+## Pre-requisite
+To use the Naver MCP server, you need to apply for access to the Naver Open API. 
+You can apply for Open API access at the link below:
+
+https://developers.naver.com/apps/#/register=datalab
+
+
+## Installation
+
+### from Pypi (recommended)
+
+Run it with (uv):
+```sh
+uv pip install mcp-naver
+
+uv run python -m mcp-naver.hosts.claude_desktop \
+  -e NAVER_CLIENT_ID=<YOUR NAVER CLIENT ID> \
+  -e NAVER_CLIENT_SECRET=<YOUR NAVER CLIENT SECRET>
+```
+
+Run it with:
+```sh
+pip install mcp-naver
+
+python -m mcp-naver.hosts.claude_desktop \
+  -e NAVER_CLIENT_ID=<YOUR NAVER CLIENT ID> \
+  -e NAVER_CLIENT_SECRET=<YOUR NAVER CLIENT SECRET>
+```
+
+
+### from source
 
 ```sh
 # Clone the repository
@@ -17,14 +46,6 @@ cd py-mcp-naver
 uv sync --dev --all-extras
 ```
 
-### Pre-requisite
-To use the Naver MCP server, you need to apply for access to the Naver Open API. 
-You can apply for Open API access at the link below:
-
-https://developers.naver.com/apps/#/register=datalab
-
-
-### Run
 Run it with:
 ```sh
 # Start the server (Using FastMCP CLI)
