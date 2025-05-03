@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/pfldy2850-py-mcp-naver-badge.png)](https://mseep.ai/app/pfldy2850-py-mcp-naver)
+
 # Naver MCP Server
 
 A server implementation for Naver OpenAPI using the Model Context Protocol (MCP). This project provides tools to interact with various Naver services, such as searching blogs, news, books, and more.
